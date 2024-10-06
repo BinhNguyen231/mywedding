@@ -1,1 +1,1 @@
-# mywedding
+# Wedding
