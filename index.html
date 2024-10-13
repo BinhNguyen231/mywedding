@@ -115,7 +115,19 @@
       </g>
       </svg>GALLERY </a> </li>
 
-      <div class="background-music-embed text-center"> <iframe id="iframe_play" width="30%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/749202715&color=%23ff5500&auto_play=true&hide_related=true&show_comments=true&show_user=true&show_reposts=false&show_teaser=false&visual=false"></iframe></div>
+      <div style="display: flex; justify-content: center;" class="background-music-embed text-center">
+        <button id="play-audio" style="border-radius:50%; border: none; display: flex; justify-content: center; padding-top: 7px; align-items: center; width: 30px; height: 30px;" class="background-music-toggle toggle">
+          <svg id="iconPause" style="display: none" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M17.5,12c0,2.14-1.5,3.92-3.5,4.38v-1.04c1.44-0.43,2.5-1.76,2.5-3.34c0-1.58-1.06-2.9-2.5-3.34V7.62 C16,8.08,17.5,9.86,17.5,12z M12,4.07v15.86L6.16,15H3V9h3.16L12,4.07z M11,6.22L6.52,10H4v4h2.52L11,17.78V6.22z M21,12 c0,4.08-3.05,7.44-7,7.93v-1.01c3.39-0.49,6-3.4,6-6.92s-2.61-6.43-6-6.92V4.07C17.95,4.56,21,7.92,21,12z" class="style-scope yt-icon"></path></g></svg>
+          <svg id="iconPlay" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M6,4l12,8L6,20V4z" class="style-scope yt-icon"></path></g></svg>
+        </button>
+        <div class="background-music-embed" style="display: none;">
+          <audio id="myAudio" controls autoplay loop>
+            <source src="audio/test.mp3" type="audio/mpeg">
+          </audio>
+
+          <!--        <iframe id="iframe_play" width="30%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/749202715&color=%23ff5500&auto_play=true&hide_related=true&show_comments=true&show_user=true&show_reposts=false&show_teaser=false&visual=false"></iframe>-->
+        </div>
+      </div>
     <!-- menu for web ends here-->
   </ul>
 </div>
@@ -609,27 +621,28 @@
                 </div>
               </div>
               <div class="container ceremony-section">
-                <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 text-center wow fadeInLeft responsive-margin padding-left-right-zero" data-class="fadeInLeft">
-                  <div class="ceremony-detail"> <svg version="1.1" x="0px" y="0px" width="338.7px" height="355.1px" viewBox="0 0 338.7 355.1" style="enable-background: new 0 0 338.7 355.1;" xml:space="preserve">
+                <div class="row" style="display: flex; justify-content: center">
+                  <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 text-center wow fadeInLeft responsive-margin padding-left-right-zero" data-class="fadeInLeft">
+                    <div class="ceremony-detail"> <svg version="1.1" x="0px" y="0px" width="338.7px" height="355.1px" viewBox="0 0 338.7 355.1" style="enable-background: new 0 0 338.7 355.1;" xml:space="preserve">
                     <defs></defs>
-                    <path class="st0" d="M338.1,3.8C337,1.5,334.7,0,332.2,0H6.5C4,0,1.7,1.5,0.6,3.8c-1.1,2.3-0.7,5,0.9,6.9l125.7,148.5v151.1h-12.9
+                      <path class="st0" d="M338.1,3.8C337,1.5,334.7,0,332.2,0H6.5C4,0,1.7,1.5,0.6,3.8c-1.1,2.3-0.7,5,0.9,6.9l125.7,148.5v151.1h-12.9
     c-12.4,0-22.4,10.1-22.4,22.4c0,12.4,10.1,22.4,22.4,22.4h110.1c12.4,0,22.4-10.1,22.4-22.4c0-12.4-10.1-22.4-22.4-22.4h-12.9V159.2
     l78.8-93.1c2.3-2.7,2-6.8-0.8-9.2c-2.7-2.3-6.8-2-9.2,0.8L200,152.6c-1,1.2-1.5,2.7-1.5,4.2v153.5h-58.2V156.8c0-1.5-0.5-3-1.5-4.2
     L20.5,13h297.6l-15.4,18.2c-2.3,2.7-2,6.8,0.8,9.2c2.7,2.3,6.8,2,9.2-0.8l24.5-28.9C338.8,8.8,339.2,6.1,338.1,3.8z M233.8,332.7
     c0,5.2-4.2,9.4-9.4,9.4H114.3c-5.2,0-9.4-4.2-9.4-9.4s4.2-9.4,9.4-9.4h110.1C229.6,323.3,233.8,327.5,233.8,332.7z"></path>
                     </svg>
-                    <h5> Tiệc cưới<br>
-                       </h5>
-                    <h4>Thứ Bảy | 16.11.2024 | 16:30</h4>
-                    <img class="pin-icon" src="images/pin.png" alt="Location-pin">
-                    <p>Nhà trai: Số 80, đường Lê Hưng, Quảng Thắng, TP. Thanh Hóa </p>
-                    <p>Nhà gái: Số 28, xóm Tân Hưng, thôn Sét, Định Hải, Yên Định, Thanh Hóa </p>
+                      <h5> Tiệc cưới<br>
+                      </h5>
+                      <h4>Thứ Bảy | 16.11.2024 | 16:30</h4>
+                      <img class="pin-icon" src="images/pin.png" alt="Location-pin">
+                      <p>Nhà trai: Số 80, đường Lê Hưng, Quảng Thắng, TP. Thanh Hóa </p>
+                      <p>Nhà gái: Số 28, xóm Tân Hưng, thôn Sét, Định Hải, Yên Định, Thanh Hóa </p>
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 text-center wow fadeInUp responsive-margin padding-left-right-zero" data-class="fadeInUp">
-                  <div class=" ceremony-detail"> <svg version="1.1" x="0px" y="0px" width="150.273px" height="161.365px" viewBox="0 0 150.273 161.365" enable-background="new 0 0 150.273 161.365" xml:space="preserve">
+                  <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 text-center wow fadeInUp responsive-margin padding-left-right-zero" data-class="fadeInUp">
+                    <div class=" ceremony-detail"> <svg version="1.1" x="0px" y="0px" width="150.273px" height="161.365px" viewBox="0 0 150.273 161.365" enable-background="new 0 0 150.273 161.365" xml:space="preserve">
                     <defs></defs>
-                    <g>
+                      <g>
                       <g>
                         <g>
                           <g>
@@ -684,27 +697,28 @@
                           </g>
                         </g>
                       </g>
-                      <g>
+                        <g>
                         <path d="M28.969,86.436c-0.861,0-1.664-0.443-2.122-1.178L16.749,69.057c-0.729-1.172-0.372-2.714,0.8-3.444
 			c1.169-0.728,2.712-0.374,3.444,0.8L28.777,78.9l10.587-20.287c0.64-1.226,2.15-1.699,3.373-1.061
 			c1.225,0.64,1.699,2.149,1.061,3.373L31.186,85.092c-0.415,0.796-1.225,1.308-2.121,1.342C29.032,86.435,29,86.436,28.969,86.436z
 			"></path>
                       </g>
-                      <g>
+                        <g>
                         <path d="M110.21,87.061c-1.342,0-2.451-1.064-2.497-2.416l-0.607-18.053c-0.046-1.38,1.035-2.536,2.415-2.583
 			c1.385-0.065,2.536,1.035,2.583,2.415l0.607,18.053c0.046,1.38-1.035,2.536-2.415,2.583
 			C110.268,87.061,110.238,87.061,110.21,87.061z"></path>
                       </g>
-                      <g>
+                        <g>
                         <path d="M109.908,100.561c-0.623,0-1.246-0.231-1.731-0.696c-0.996-0.956-1.028-2.539-0.072-3.535l25.209-26.262
 			c0.957-0.996,2.537-1.027,3.535-0.072c0.996,0.956,1.028,2.539,0.072,3.535l-25.209,26.262
 			C111.221,100.303,110.565,100.561,109.908,100.561z"></path>
                     </svg>
-                    <h5> Lễ thành hôn<br>
+                      <h5> Lễ thành hôn<br>
                       </h5>
-                    <h4>Chủ nhật | 17.11.2024 | 10:00</h4>
-                    <img class="pin-icon" src="images/pin.png" alt="Location-pin">
-                    <p>Nhà trai: Số 80, đường Lê Hưng, Quảng Thắng, TP. Thanh Hóa</p>
+                      <h4>Chủ nhật | 17.11.2024 | 10:00</h4>
+                      <img class="pin-icon" src="images/pin.png" alt="Location-pin">
+                      <p>Nhà trai: Số 80, đường Lê Hưng, Quảng Thắng, TP. Thanh Hóa</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -770,8 +784,9 @@
   </div>
 </div>
 <div id="background-music" class="background-music background-music-bottom-left">
-  <button class="background-music-toggle toggle"><span class="fa fa-music"></span></button>
-  <div class="background-music-embed"> <iframe width="100%" height="166" scrolling="no" allow="autoplay" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/749202715&color=%23ff5500&auto_play=true&hide_related=true&show_comments=true&show_user=true&show_reposts=false"></iframe></div>
+<!--    <iframe width="100%" height="166" scrolling="no" allow="autoplay" frameborder="no"
+\src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/749202715&color=%23ff5500&auto_play=true&hide_related=true&show_comments=true&show_user=true&show_reposts=false"></iframe>-->
+  </div>
 </div>
 <script type="text/javascript" src="js/jquery-2.1.4.js"></script> 
 <script type="text/javascript" src="js/modernizr.custom.js"></script> 
@@ -790,6 +805,24 @@
 <script type="text/javascript" src="js/wow.js"></script> 
 <script type="text/javascript" src="js/jquery.validate.min.js"></script> 
 <script type="text/javascript" src="js/formValidation.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<script>
+  const iconPlay = document.getElementById('iconPlay');
+  const iconPause = document.getElementById('iconPause');
+  const playAudio = document.getElementById('play-audio');
+  playAudio.addEventListener('click', function() {
+    var audio = document.getElementById("myAudio");
+    if (audio.paused) {
+      iconPause.style.display= 'block';
+      iconPlay.style.display= 'none';
+      audio.play();
+    } else {
+      iconPlay.style.display= 'block';
+      iconPause.style.display= 'none';
+      audio.pause();
+    }
+  })
+</script>
 
 </body>
 
