@@ -807,21 +807,45 @@
 <script type="text/javascript" src="js/formValidation.js"></script>
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 <script>
-  const iconPlay = document.getElementById('iconPlay');
-  const iconPause = document.getElementById('iconPause');
-  const playAudio = document.getElementById('play-audio');
-  playAudio.addEventListener('click', function() {
-    var audio = document.getElementById("myAudio");
-    if (audio.paused) {
-      iconPause.style.display= 'block';
-      iconPlay.style.display= 'none';
-      audio.play();
-    } else {
-      iconPlay.style.display= 'block';
-      iconPause.style.display= 'none';
-      audio.pause();
-    }
-  })
+  window.onload = function() {
+    const audio = document.getElementById("myAudio");
+    const playButton = document.getElementById('play-audio'); // Nút Play/Pause
+    const iconPlay = document.getElementById('iconPlay'); // Icon phát
+    const iconPause = document.getElementById('iconPause'); // Icon tạm dừng
+
+    // Sự kiện khi người dùng nhấn vào nút
+    playButton.addEventListener('click', function() {
+      if (audio.paused) {
+        audio.play(); // Phát nhạc
+        iconPause.style.display = 'block'; // Hiện icon Pause
+        iconPlay.style.display = 'none'; // Ẩn icon Play
+      } else {
+        audio.pause(); // Tạm dừng nhạc
+        iconPlay.style.display = 'block'; // Hiện icon Play
+        iconPause.style.display = 'none'; // Ẩn icon Pause
+      }
+    });
+
+    // Phát nhạc khi người dùng di chuột lần đầu trên trang
+    window.addEventListener('mousemove', function playMusic() {
+      if (audio.play) {
+        audio.play();
+        iconPause.style.display = 'block';
+        iconPlay.style.display = 'none'; // Cập nhật icon
+      }
+      // Xóa sự kiện sau khi nhạc được phát
+      window.removeEventListener('mousemove', playMusic);
+    });
+    // Phát nhạc khi người dùng chạm vào màn hình trên điện thoại
+    window.addEventListener('touchstart', function playMusic() {
+      if (audio.play) {
+        audio.play();
+        iconPause.style.display = 'block';
+        iconPlay.style.display = 'none'; // Cập nhật icon
+      }
+      window.removeEventListener('touchstart', playMusic); // Loại bỏ sự kiện sau khi nhạc phát
+    });
+  };
 </script>
 
 </body>
