@@ -122,7 +122,7 @@
         </button>
         <div class="background-music-embed" style="display: none;">
           <audio id="myAudio" controls autoplay loop>
-            <source src="audio/test.mp3" type="audio/mpeg">
+            <source src="audio/chi_can_co_nhau.mp3" type="audio/mpeg">
           </audio>
 
           <!--        <iframe id="iframe_play" width="30%" height="20" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/749202715&color=%23ff5500&auto_play=true&hide_related=true&show_comments=true&show_user=true&show_reposts=false&show_teaser=false&visual=false"></iframe>-->
@@ -814,24 +814,24 @@
     const iconPause = document.getElementById('iconPause'); // Icon tạm dừng
 
     // Sự kiện khi người dùng nhấn vào nút
-    playButton.addEventListener('click', function() {
+    playButton.addEventListener('click', function () {
       if (audio.paused) {
-        audio.play(); // Phát nhạc
         iconPause.style.display = 'block'; // Hiện icon Pause
         iconPlay.style.display = 'none'; // Ẩn icon Play
+        audio.play(); // Phát nhạc
       } else {
-        audio.pause(); // Tạm dừng nhạc
         iconPlay.style.display = 'block'; // Hiện icon Play
         iconPause.style.display = 'none'; // Ẩn icon Pause
+        audio.pause(); // Tạm dừng nhạc
       }
     });
 
     // Phát nhạc khi người dùng di chuột lần đầu trên trang
     window.addEventListener('mousemove', function playMusic() {
       if (audio.play) {
-        audio.play();
         iconPause.style.display = 'block';
         iconPlay.style.display = 'none'; // Cập nhật icon
+        audio.play();
       }
       // Xóa sự kiện sau khi nhạc được phát
       window.removeEventListener('mousemove', playMusic);
@@ -839,9 +839,9 @@
     // Phát nhạc khi người dùng chạm vào màn hình trên điện thoại
     window.addEventListener('touchstart', function playMusic() {
       if (audio.play) {
-        audio.play();
         iconPause.style.display = 'block';
         iconPlay.style.display = 'none'; // Cập nhật icon
+        audio.play();
       }
       window.removeEventListener('touchstart', playMusic); // Loại bỏ sự kiện sau khi nhạc phát
     });
