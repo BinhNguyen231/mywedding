@@ -115,7 +115,7 @@ $(document).on('ready', function () {
    /*Timer for wedding page*/
    if ($.find('#example').length) {
        $('#example').countdown({
-           date: '09/09/2017 13:00:00', //Enter Target date & time - MM/DD/YYYY hh:mm:ss
+           date: '11/17/2024 09:30:00', //Enter Target date & time - MM/DD/YYYY hh:mm:ss
            offset: +5.5,
            day: 'Day',
            days: 'Days'
