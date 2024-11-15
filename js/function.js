@@ -90,7 +90,7 @@ $(document).on('ready', function () {
 
     // JavaScript Document
    var today = new Date();
-   var target = new Date('11/17/2024 10:00:00'); //Enter Target date & time - MM/DD/YYYY hh:mm:ss
+   var target = new Date('11/17/2024 09:30:00'); //Enter Target date & time - MM/DD/YYYY hh:mm:ss
    var startdate = new Date(); //Enter Timer start date or Today's date - MM/DD/YYYY
    if ($.find('.countdown').length) {
        $('.countdown').final_countdown({
